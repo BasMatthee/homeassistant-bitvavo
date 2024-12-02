@@ -139,6 +139,8 @@ class BitvavoDataUpdateCoordinator(DataUpdateCoordinator):
 
                 balances_dict[balance["symbol"]] = {}
                 balances_dict[balance["symbol"]].update(balance)
+                balances_dict[balance["symbol"]]["asset_value_in_base_asset"] = 0
+                                                 
                 base_asset_ticker_details = None
 
                 if ASSET_VALUE_BASE not in balance["symbol"]:
